@@ -1,0 +1,5 @@
+jQuery(function($){var elementoA=$('.xstore-compare-icon');if(elementoA.length){elementoA.attr('title','Añadir a Comparación')}
+var elementoB=$('.xstore-wishlist-icon');if(elementoB.length){elementoB.attr('title','Añadir a Favoritos')}
+var elementoC=$('.add_to_cart_button');if(elementoC.length){elementoC.attr('title','Añadir a Carrito')}
+var elementoD=$('.show-quickly');if(elementoD.length){elementoD.attr('title','Vista Rápida')}
+$(document).ready(function(){const etMiniContents=$('.et-mini-content');const contWhats=$('.cont-whats');const handleClassMutation=function(mutation){if(mutation.attributeName==='class'){if($(mutation.target).hasClass('active')){contWhats.hide()}else{contWhats.show()}}};etMiniContents.each(function(index,etMiniContent){const observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){handleClassMutation(mutation)})});observer.observe(etMiniContent,{attributes:!0})})})})
